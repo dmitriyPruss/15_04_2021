@@ -180,6 +180,15 @@ const myArray = {
     },
 };
 
+const myArray2 = {
+    0: 2,
+    1: 3,
+    length: 2,
+};
+
+myArray2.pop = myArray.pop;
+myArray2.push = myArray.push;
+myArray2.shift = myArray.shift;
 
 
 
