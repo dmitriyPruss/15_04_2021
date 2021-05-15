@@ -166,7 +166,18 @@ const myArray = {
     push(item) {
         this[this.length] = item;
         return ++this.length;
-    }
+    },
+    shift() {
+        if (this.length === 0) {
+            return;
+        }
+        const firstItem = this[0];
+        for(let i = 0; i < this.length - 1; i++) {
+            this[i] = this[i + 1];
+        };
+        delete this[--this.length];
+        return firstItem;
+    },
 };
 
 
