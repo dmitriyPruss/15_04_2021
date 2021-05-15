@@ -109,21 +109,70 @@ for(let i = 0; i <=2; i++) {
     
 };
 
-const PASSWORD = '123';
-const TRY_LIMIT = 3;
+// task
+// const PASSWORD = '123';
+// const TRY_LIMIT = 3;
 
-let currentTry = 1;
-let isPasswordCorrect = false;
+// let currentTry = 1;
+// let isPasswordCorrect = false;
 
-do {
-    isPasswordCorrect = prompt('Input password') === PASSWORD;
-    if (isPasswordCorrect) {
-        break;
-    };
-} while (++currentTry <= TRY_LIMIT);
+// do {
+//     isPasswordCorrect = prompt('Input password') === PASSWORD;
+//     if (isPasswordCorrect) {
+//         break;
+//     };
+// } while (++currentTry <= TRY_LIMIT);
 
-console.log((`Password is ${isPasswordCorrect ? 'correct' : 
-'not correct'}`));
+// console.log((`Password is ${isPasswordCorrect ? 'correct' : 
+// 'not correct'}`));
+
+
+// Arrays
+const obj1 = {};
+const obj2 = new Object();
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = new Array();
+/**
+ * 0 => 'father'
+ * 1 => 'mother'
+ */
+
+let summ = 0;
+for( let i = 0; i < arr1.length; i++) {
+    console.log('arr1[i] :>> ', arr1[i]);
+    summ += arr1[i];
+};
+console.log('summ :>> ', summ);
+
+// array methods
+// pop
+//  arr3.pop()
+
+const myArray = {
+    0: 1,
+    1: 2,
+    2: 3,
+    4: 5,
+    length: 5,
+    pop() {
+        if (this.length === 0) {
+            return; // return undefined; 
+        };
+        const lastItem = this[this.length - 1];
+        delete this[--this.legth];
+        return lastItem;
+    },
+    push(item) {
+        this[this.length] = item;
+        return ++this.length;
+    }
+};
+
+
+
+
+
 
   
 
